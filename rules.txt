@@ -1,0 +1,28 @@
+=============
+ Dice At War
+ =============
+
+Two player game, the object is to capture all of your opponent's dice.
+
+Each turn, you and your opponent pick a die from your live pool.
+
+You both roll your dice.
+
+If the rolls are tied both dice go into the prize pool.
+
+If the rolls are not tied then the player with the higher roll wins both dice
+and any dice in the prize pool.
+
+Dice won are put in the winner's used pool.
+
+When the live pool is empty, all the dice in the used pool are put in the
+live pool.
+
+Each player starts with 5 dice:
+- d12, a sized sieded die lablled 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+- d6, a sixed sided die labelled 2, 4, 6, 8, 10, 12
+- d4, a four sided die labelled 3, 6, 9, 12
+- d3, a three sided die labelled 4, 8, 12
+- d2, a 2 sided die labelled 6, 12
+
+If you run out of dice you lose the game.
