@@ -110,6 +110,8 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 
   Die* die3 = set.removeDie("Die3");
 
+  std::cout << "after removing Die3: " << set.listDice() << std::endl;
+
   EXPECT_EQ(set.getNumDice(), 0);
   EXPECT_EQ(set.listDice(), "empty");
 
