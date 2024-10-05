@@ -101,19 +101,19 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 
   delete die;
 
-  die = set.removeDie("Die1");
+  Die* die2 = set.removeDie("Die1");
 
   EXPECT_EQ(set.getNumDice(), 1);
   EXPECT_EQ(set.listDice(), "Die3");
 
-  delete die;
+  delete die2;
 
-  die = set.removeDie("Die3");
+  Die* die3 = set.removeDie("Die3");
 
   EXPECT_EQ(set.getNumDice(), 0);
   EXPECT_EQ(set.listDice(), "empty");
 
-  delete die;
+  delete die3;
 }
 
 TEST(TestDiceSet, unsuccessfulRemoveDieFromEmptySetTest) {
