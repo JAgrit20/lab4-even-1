@@ -1,3 +1,8 @@
+/**
+* @author LN Wilson <n.wilson@uleth.ca>
+* @date 2023-01-30
+*/
+
 #include <string>
 #include <vector>
 
@@ -53,8 +58,6 @@ TEST(TestDiceSet, invalidAddSameDieTwiceTest) {
 
   EXPECT_NO_THROW(set.addDie(die));
   EXPECT_THROW(set.addDie(die), invalid_object);
-
-  delete die; 
 }
 
 TEST(TestDiceSet, addSameIdentifierDieTest) {
@@ -71,7 +74,7 @@ TEST(TestDiceSet, addSameIdentifierDieTest) {
   set.addDie(new FairDie("die"));
 
   EXPECT_EQ(set.getNumDice(), 2);
-  EXPECT_EQ(set.listDice(), "die-die^"); 
+  EXPECT_EQ(set.listDice(), "die-die^");
 }
 
 TEST(TestDiceSet, unsuccessfulAddDieTest) {
@@ -83,7 +86,7 @@ TEST(TestDiceSet, unsuccessfulAddDieTest) {
 TEST(TestDiceSet, successfulRemoveDieTest) {
   std::vector<Die*> someDice;
 
-  for (unsigned i = 0; i < 3; ++i)
+  for (unsigned i = 0; i < 2; ++i)
     someDice.push_back(new FairDie("Die" + std::to_string(i + 1)));
 
   DiceSet set(someDice);
@@ -91,36 +94,22 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
   EXPECT_EQ(set.getNumDice(), 3);
   EXPECT_EQ(set.listDice(), "Die1-Die2-Die3");
 
-<<<<<<< HEAD
   Die* die = set.removeDie("Die2");
-=======
-  Die* die = set.removeDie("Die1");
 
->>>>>>> 4f356e401a00273ebe3a053e7f189dfb5f2c560a
   EXPECT_EQ(set.getNumDice(), 2);
-  EXPECT_EQ(set.listDice(), "Die2-Die3");
+  EXPECT_EQ(set.listDice(), "Die1-Die3");
 
-  delete die; 
+  delete die;
 
-<<<<<<< HEAD
   Die* die2 = set.removeDie("Die1");
-=======
-  Die* die2 = set.removeDie("Die2");
 
->>>>>>> 4f356e401a00273ebe3a053e7f189dfb5f2c560a
   EXPECT_EQ(set.getNumDice(), 1);
   EXPECT_EQ(set.listDice(), "Die3");
 
-  Die* die3 = set.removeDie("Die3");
-
   delete die2;
 
-<<<<<<< HEAD
   Die* die3 = set.removeDie("Die3");
-=======
-  //Die* die3 = set.removeDie("Die3");
 
->>>>>>> 4f356e401a00273ebe3a053e7f189dfb5f2c560a
   EXPECT_EQ(set.getNumDice(), 0);
   EXPECT_EQ(set.listDice(), "empty");
 
@@ -150,6 +139,7 @@ TEST(TestDiceSet, unsuccessfulRemoveDieFromNonEmptySetTest) {
 
   EXPECT_EQ(die, nullptr);
 }
+
 
 TEST(TestDiceSet, transferDiceToTest) {
   std::vector<Die*> someDice;
