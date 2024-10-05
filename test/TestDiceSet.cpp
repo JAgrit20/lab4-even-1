@@ -119,7 +119,7 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 TEST(TestDiceSet, unsuccessfulRemoveDieFromEmptySetTest) {
   DiceSet emptySet;
 
-  Die* die = emptySet.removeDie("Die1");
+  Die* die = emptySet.removeDie("empty");
 
   EXPECT_EQ(die, nullptr);
 }
