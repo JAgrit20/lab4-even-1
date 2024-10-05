@@ -114,7 +114,6 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
   EXPECT_EQ(set.listDice(), "empty");
 
   delete die3;
-
 }
 
 TEST(TestDiceSet, unsuccessfulRemoveDieFromEmptySetTest) {
