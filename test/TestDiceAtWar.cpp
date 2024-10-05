@@ -73,9 +73,6 @@ TEST(TestDiceAtWar, pickDieNumTest) {
 TEST(TestDiceAtWar, completeTurnTest) {
   DiceAtWar daw;
 
-  //old one
-  //Die* die0 = daw.pickDie(0, "d12");
-  
   Die* die0 = daw.pickDie(0, "d4");
   Die* die1 = daw.pickDie(1, "d2");
 
