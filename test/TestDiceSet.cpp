@@ -115,7 +115,6 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 
   delete die3;
 
-  Die* die4 = set.removeDie("empty");
 }
 
 TEST(TestDiceSet, unsuccessfulRemoveDieFromEmptySetTest) {
