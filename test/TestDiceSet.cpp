@@ -86,7 +86,7 @@ TEST(TestDiceSet, unsuccessfulAddDieTest) {
 TEST(TestDiceSet, successfulRemoveDieTest) {
   std::vector<Die*> someDice;
 
-  for (unsigned i = 0; i < 4; ++i)
+  for (unsigned i = 0; i < 3; ++i)
     someDice.push_back(new FairDie("Die" + std::to_string(i + 1)));
 
   DiceSet set(someDice);
