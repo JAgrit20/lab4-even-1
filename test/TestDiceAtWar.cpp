@@ -40,9 +40,9 @@ TEST(TestDiceAtWar, writeRulesTest) {
 TEST(TestDiceAtWar, pickDieNumAndIdTest) {
   DiceAtWar daw;
 
-  Die* die = daw.pickDie(0, "d12");
+  Die* die = daw.pickDie(0, "d2");
 
-  EXPECT_EQ(die->getIdentifier(), "d12");
+  EXPECT_EQ(die->getIdentifier(), "d2");
 
   delete die;
 
