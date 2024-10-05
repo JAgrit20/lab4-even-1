@@ -73,7 +73,7 @@ TEST(TestDiceAtWar, pickDieNumTest) {
 TEST(TestDiceAtWar, completeTurnTest) {
   DiceAtWar daw;
 
-  Die* die0 = daw.pickDie(0, "d12");
+  Die* die0 = daw.pickDie(0, "d4");
   Die* die1 = daw.pickDie(1, "d2");
 
   EXPECT_NO_THROW(daw.completeTurn(die0, die1));
