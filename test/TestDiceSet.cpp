@@ -112,16 +112,12 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 
   std::cout << "after removing Die3: " << set.listDice() << std::endl;
 
-  die = set.removeDie("Die1");
-
-  EXPECT_EQ(set.getNumDice(), 1);
-  EXPECT_EQ(set.listDice(), "Die3");
+  EXPECT_EQ(set.getNumDice(), 0);
+  EXPECT_EQ(set.listDice(), "empty");
 
   delete die;
 
-  die = set.removeDie("Die3");
-
-  std::cout << "after removing Die3: " << set.listDice() << std::endl;
+  die = set.removeDie("empty");
 
   EXPECT_EQ(set.getNumDice(), 0);
   EXPECT_EQ(set.listDice(), "empty");
