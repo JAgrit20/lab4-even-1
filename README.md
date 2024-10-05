@@ -4,9 +4,9 @@ This file is written in [GLFM](https://docs.gitlab.com/ee/user/markdown.html).
 
 Alter this file to report the group roles and group members[^1]:
 
-* Repo Manager: `Dame Nutquacker (nutd2720)`
-* ...
-* Playtesters: (these will be the names of the other team)
+* Repo Manager: `James (ganm2721)`
+* Maintainer: `Areeb (ahma2721) Bobby (rodr2721)`
+* Playtesters: `[insert group members]`
 
 Overview:
 
