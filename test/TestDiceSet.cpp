@@ -86,7 +86,7 @@ TEST(TestDiceSet, unsuccessfulAddDieTest) {
 TEST(TestDiceSet, successfulRemoveDieTest) {
   std::vector<Die*> someDice;
 
-  for (unsigned i = 0; i < 2; ++i)
+  for (unsigned i = 0; i < 3; ++i)
     someDice.push_back(new FairDie("Die" + std::to_string(i + 1)));
 
   DiceSet set(someDice);
@@ -110,8 +110,8 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
 
   Die* die3 = set.removeDie("Die3");
 
-  EXPECT_EQ(set.getNumDice(), 0);
-  EXPECT_EQ(set.listDice(), "empty");
+  EXPECT_EQ(set.getNumDice(), 1);
+  EXPECT_EQ(set.listDice(), "Die3");
 
   delete die3;
 }
