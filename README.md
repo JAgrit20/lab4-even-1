@@ -6,7 +6,7 @@ Alter this file to report the group roles and group members[^1]:
 
 * Repo Manager: `James (ganm2721)`
 * Maintainer: `Areeb (ahma2721) Bobby (rodr2721)`
-* Playtesters: `[insert group members]`
+* Playtesters: Vergil, Jiwon, Muhammad, Manave
 
 Overview:
 
