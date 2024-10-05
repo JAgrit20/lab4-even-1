@@ -106,6 +106,8 @@ TEST(TestDiceSet, successfulRemoveDieTest) {
   EXPECT_EQ(set.getNumDice(), 1);
   EXPECT_EQ(set.listDice(), "Die3");
 
+  delete die;
+
   die = set.removeDie("Die3");
 
   EXPECT_EQ(set.getNumDice(), 0);
